@@ -3,6 +3,9 @@
 	<input type="text" name="long_url">
 	<input type="submit" name="Submit">
 </form>
+<% if @error_msgs != nil %>
+	<p><%= @error_msgs %></p>
+<% end %>
 <table border="1" cellpadding="10">
 	<tr>
 		<th>Long URL</th>
