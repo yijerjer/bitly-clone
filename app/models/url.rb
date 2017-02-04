@@ -1,5 +1,5 @@
 class Url < ActiveRecord::Base
-	validates :long_url, uniqueness: true
+	validates :long_url, uniqueness: true, format: { with: URI::regexp }
 	validates :short_url, uniqueness: true
 	# This is Sinatra! Remember to create a migration!
 	before_create do 
