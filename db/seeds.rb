@@ -1,0 +1,8 @@
+Url.create(long_url: "https://www.google.com/")
+Url.create(long_url: "https://github.com/")
+Url.create(long_url: "https://www.sciencedaily.com/")
+Url.create(long_url: "https://www.youtube.com/")
+Url.create(long_url: "https://www.reddit.com/")
+Url.create(long_url: "http://devdocs.io/")
+Url.create(long_url: "https://news.ycombinator.com/")
+Url.create(long_url: "https://www.facebook.com/")

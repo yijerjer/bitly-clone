@@ -1,2 +1,16 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+<form action="#" method="post">
+	Enter URL:
+	<input type="text" name="long_url">
+	<input type="submit" name="Submit">
+</form>
+<table border="1" cellpadding="10">
+	<tr>
+		<th>Long URL</th>
+		<th>Short URL</th>
+	</tr>
+	<% @array.each do |row| %>
+		<tr>
+			<td><%= row.long_url %></td>
+			<td><%= row.short_url %></td>
+		</tr>
+	<% end %>
