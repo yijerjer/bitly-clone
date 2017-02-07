@@ -86,10 +86,8 @@ $(document).ready(function () {
 			dataType: 'json',
 			success: function(data) {
 				console.log(data);
-				if (data === 'is invalid' ) {
+				if (data.error_msgs === 'is invalid' ) {
 					$showMessage = $('<p id="ajax-msg">Invalid Address.</p>');
-				} else if (data === 'has already been taken') {
-					$showMessage = $('<p id="ajax-msg">A short link has already been created for this URL.</p>');
 				} else {
 					$showMessage = $('<p id="ajax-msg">Short Url: <a href=' + data.long_url + '>' + data.short_url + '</a></p>');
 					$showMessage.children().css({
@@ -98,7 +96,8 @@ $(document).ready(function () {
 					});
 				}
 
-				if ($('#ajax-msg').length === 0) {
+				if ($showMessage.html() !== $('#ajax-msg').html()) {
+					$('#ajax-msg').remove();
 					$showMessage.insertBefore('#signup-learnmore').hide().fadeIn(500);
 				}
 			},
