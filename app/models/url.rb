@@ -8,7 +8,7 @@ class Url < ActiveRecord::Base
 
 	def shorten
 		all_chars = [('a'..'z'), ('A'..'Z'), ('0'..'9')].map(&:to_a).flatten
-		string = (0...8).map { all_chars[rand(all_chars.length)] }.join
+		string = (0...10).map { all_chars[rand(all_chars.length)] }.join
 	end
 
 end

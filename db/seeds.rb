@@ -1,8 +1,18 @@
-Url.create(long_url: "https://www.google.com/")
-Url.create(long_url: "https://github.com/")
-Url.create(long_url: "https://www.sciencedaily.com/")
-Url.create(long_url: "https://www.youtube.com/")
-Url.create(long_url: "https://www.reddit.com/")
-Url.create(long_url: "http://devdocs.io/")
-Url.create(long_url: "https://news.ycombinator.com/")
-Url.create(long_url: "https://www.facebook.com/")
+# require 'csv'
+
+
+# Url.transaction do
+# 	urls = CSV.read('db/urls')
+
+# 	urls.each_with_index do |row, index|
+# 		p each_with_index
+# 		row[0] = row[0][1..-2]
+
+# 		all_chars = [('a'..'z'), ('A'..'Z'), ('0'..'9')].map(&:to_a).flatten
+# 		string = (0...10).map { all_chars[rand(all_chars.length)] }.join
+# 		row[1] = string
+# 	end
+	
+# 	attr = [:long_url, :short_url]
+# 	Url.import attr, urls, validate: true
+# end

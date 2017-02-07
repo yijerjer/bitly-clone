@@ -1,0 +1,224 @@
+body {
+	margin: 0;
+	font-family: sans-serif;
+}
+
+header {
+	height: 110px;
+	background: url("//d3h5jhobc20ump.cloudfront.net/7607bc8563ac28b8631dbc5867d672ee.jpg") top center no-repeat;
+	background-size: cover;
+	padding-bottom: 457px;
+	margin-bottom: -457px;
+}
+
+#header-div {
+	margin-right: auto;
+	margin-left: auto;
+	height: 43px;
+	max-width: 1160px;
+	overflow: hidden;
+	vertical-align: middle;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	color: #ffffff;
+}
+
+#logo {
+	float: left;
+	font-size: 20pt;
+	height: 43px;
+	margin-right: 64px;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 43px;
+	cursor: pointer;
+}
+
+#nav-bar {
+	float: left;
+	display: block;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+li {
+	float: left;
+	margin: 0 32px 0 0;
+
+}
+
+li a {
+	display: block;
+	cursor: pointer;
+}
+
+#login-signup {
+	float: right;
+}
+
+#login-signup > a {
+	float: left;
+	display: block;
+	height: 43px;
+	width: 114px;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 43px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#login-btn {
+	margin-right: 20px;
+}
+
+#signup-btn {
+	color: #61b3de;
+	border-color: #ffffff;
+	background-color: #ffffff;
+}
+
+#text-form {
+	max-width: 1160px;
+	margin-right: auto;
+	margin-left: auto;
+	color: #ffffff;
+	text-align: center;
+	margin-top: 28px;
+	padding-top: 64px;
+	height: 365px;
+}
+
+#big-text {
+	margin: 0 0 8px 0;
+}
+
+#small-text {
+	margin-bottom: 52px;
+}
+
+#url-submit {
+	width: 773px;
+	height: 60px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+#url-input {
+	float: left;
+	width: 654px;
+	height: 60px;
+	padding: 14.4px 23px;
+	border: none;
+	border-radius: 3px 0 0 3px;
+}
+
+#shorten-btn {
+	float: right;
+	padding-top: 20.4px;
+	padding-bottom: 20.4px;
+	padding-left: 28.8px;
+	padding-right: 28.8px;
+	border: none;
+	border-radius: 0 3px 3px 0;
+	color: #ffffff;
+	background-color: #ee6123;
+	cursor: pointer;
+}
+
+#error-msg {
+	color: #aaaaaa;
+	font-size: 10pt;
+	padding-bottom: 10px;
+}
+
+#signup-learnmore {
+	width: 773px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#signupforfree {
+	display: inline-block;
+	width: 180px;
+	height: 60px;
+	line-height: 60px;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 60px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+#learnmore {
+	cursor: pointer;
+}
+
+#learnmore:hover {
+	text-decoration: underline;
+}
+
+#info {
+	line-height: 20px;
+}
+
+#table-div {
+	padding-top: 30px;
+	padding-bottom: 50px;
+}
+
+#url-table {
+	border: none;
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#url-table, th, td {
+	border: none;
+	text-align: left;
+}
+
+th {
+	border-bottom: 2px solid #dddddd;
+}
+
+td {
+	border-bottom: 1px solid #dddddd;
+	height: 60px;
+}
+
+#long-url {
+	width: 550px;
+}
+
+#short-url {
+	width: 200px;
+}
+
+#click-count {
+	width: 130px;
+}
+
+.url-link:link, .url-link:visited {
+	color: #666666;
+	text-decoration: none;
+}
+
+.url-link:hover, .url-link:active {
+	color: #000000;
+	text-decoration: none;
+}
