@@ -20,7 +20,7 @@ post '/url' do
     return new_url.to_json
   else
     error_msgs = new_url.errors.messages[:long_url][0]
-    return error_msgs
+    return error_msgs.to_json
   end
 
   # if new_url.save

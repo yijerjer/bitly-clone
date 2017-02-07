@@ -101,6 +101,10 @@ $(document).ready(function () {
 				if ($('#ajax-msg').length === 0) {
 					$showMessage.insertBefore('#signup-learnmore').hide().fadeIn(500);
 				}
+			},
+
+			error: function(data) {
+				console.log(data);
 			}
 		});
 
