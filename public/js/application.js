@@ -89,7 +89,7 @@ $(document).ready(function () {
 				if (data.error_msgs === 'is invalid' ) {
 					$showMessage = $('<p id="ajax-msg">Invalid Address.</p>');
 				} else {
-					$showMessage = $('<p id="ajax-msg">Short Url: <a href=' + data.long_url + '>' + data.short_url + '</a></p>');
+					$showMessage = $('<p id="ajax-msg">Short Url: <a href="' + data.long_url + '">' + data.short_url + '</a></p>');
 					$showMessage.children().css({
 						'color': '#aaaaaa',
 						'text-decoration': 'none'
