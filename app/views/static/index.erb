@@ -17,12 +17,14 @@
 			<th id="long-url">Long URL</th>
 			<th id="click-count">Click Count</th>
 		</tr>
-		<% @array.each do |row| %>
-			<tr>
-				<td><a class="url-link" href="/<%= row.short_url %>"><%= row.short_url %></a></td>
-				<td><%= row.long_url %></td>
-				<td><%= row.click_count %></td>
-			</tr>
+		<% if @array != nil %>
+			<% @array.each do |row| %>
+				<tr>
+					<td><a class="url-link" href="/<%= row.short_url %>"><%= row.short_url %></a></td>
+					<td><%= row.long_url %></td>
+					<td><%= row.click_count %></td>
+				</tr>
+			<% end %>
 		<% end %>
 	</table>
 </div>

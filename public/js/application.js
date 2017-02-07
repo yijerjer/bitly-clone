@@ -85,6 +85,7 @@ $(document).ready(function () {
 			data: $(this).serialize(),
 			dataType: 'json',
 			success: function(data) {
+				console.log(data);
 				if (data === 'is invalid' ) {
 					$showMessage = $('<p id="ajax-msg">Invalid Address.</p>');
 				} else if (data === 'has already been taken') {
@@ -102,6 +103,7 @@ $(document).ready(function () {
 				}
 			}
 		});
+
 	});
 
 });
