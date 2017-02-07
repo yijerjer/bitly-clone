@@ -12,6 +12,7 @@ gem 'thin'
 
 # Adding ActiveRecord and Database Components
 gem 'activerecord'
+gem 'activerecord-import'
 gem 'activesupport'
 gem 'sinatra-activerecord'
 

@@ -11,7 +11,7 @@ require 'pathname'
 	# database
 require 'pg'
 require 'active_record'
-# require 'activerecord-import'
+require 'activerecord-import'
 require 'logger'
 
 	# sinatra
