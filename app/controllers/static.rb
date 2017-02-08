@@ -1,5 +1,3 @@
-require 'json'
-
 get '/' do
   @array = Url.all.limit(20).order(id: :desc)
   erb :"static/index"
