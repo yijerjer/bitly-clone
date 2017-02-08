@@ -34,7 +34,6 @@ $(document).ready(function () {
 	// to show or hide the information (lorem ipsum) of bitly
 	var toShowOrNot = false;
 	$('#learnmore').click(function() {
-		console.log("hello");
 		toShowOrNot = !toShowOrNot;
 
 		if (toShowOrNot) {
@@ -85,7 +84,7 @@ $(document).ready(function () {
 			data: $(this).serialize(),
 			dataType: 'json',
 			success: function(data) {
-				console.log(data);
+				// add short msg under the input bar
 				if (data.error_msgs === 'is invalid' ) {
 					$showMessage = $('<p id="ajax-msg">Invalid Address.</p>');
 				} else {
@@ -94,8 +93,21 @@ $(document).ready(function () {
 						'color': '#aaaaaa',
 						'text-decoration': 'none'
 					});
-				}
+					// if a new url entry, add to table
+					if (data.error_msgs !== 'has already been taken') {
+						// if the top row (in case they press submit multiple times) is not the same, create new table row
+						if ($('#url-table-header').next().length === 0) { 
+							$tableEntry = $('<tr>\
+																 <td><a class="url-link" href="/' + data.short_url + '">' + data.short_url + '</a></td>\
+															 	 <td>' + data.long_url + '</td>\
+															 	 <td>' + data.click_count + '</td>\
+															 </tr>');
 
+							$tableEntry.insertAfter('#url-table-header').hide().fadeIn(500);
+						} 
+					}
+				}
+				// if the short msg is not the same, reprint it
 				if ($showMessage.html() !== $('#ajax-msg').html()) {
 					$('#ajax-msg').remove();
 					$showMessage.insertBefore('#signup-learnmore').hide().fadeIn(500);
