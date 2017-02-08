@@ -38,8 +38,7 @@ use Rack::Session::Cookie, expire_after: ENV['SESSION_EXPIRE'] || 2592000, # sec
                            app_file: __FILE__
 
 # Setup assets folder
-# set :public_folder, 'public'
-set :public_folder, File.join(APP_ROOT, "public")
+set :public_folder, 'public'
 
 # Setup Models (M) and its database
 require APP_ROOT.join('config', 'database')
