@@ -1,16 +1,7 @@
 require 'json'
 
 get '/' do
-  # let user create new short URL, display a list of shortened URLs
-  # if params["error"] == "is invalid"
-  #   @error_msgs = "Invalid Address."
-  # elsif params["error"] == "has already been taken"
-  #   @error_msgs = "A short link has already been created for this URL."
-  # else
-  #   @error_msgs = nil
-  # end
-
-  # @array = Url.all.order('id')
+  @array = Url.all.limit(20).order(id: :desc)
   erb :"static/index"
 end
 

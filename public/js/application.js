@@ -96,7 +96,7 @@ $(document).ready(function () {
 					// if a new url entry, add to table
 					if (data.error_msgs !== 'has already been taken') {
 						// if the top row (in case they press submit multiple times) is not the same, create new table row
-						if ($('#url-table-header').next().length === 0) { 
+						if ($('#url-table-header').next().length === 0 || $('#url-table-header').next().children()[1] !== data.long_url) { 
 							$tableEntry = $('<tr>\
 																 <td><a class="url-link" href="/' + data.short_url + '">' + data.short_url + '</a></td>\
 															 	 <td>' + data.long_url + '</td>\
